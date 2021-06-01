@@ -52,4 +52,4 @@ plt.ylabel('Frequency')
 plt.title('Histogram of Random Search')
 plt.show()
 
-print np.sum(results) / 1000.0
+print(np.sum(results) / 1000.0)
