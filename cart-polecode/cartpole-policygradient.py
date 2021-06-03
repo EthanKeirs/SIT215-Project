@@ -101,7 +101,7 @@ def run_episode(env, policy_grad, value_grad, sess):
     return totalreward
 
 
-env = gym.make('CartPole-v0')
+env = gym.make('CartPole-v1')
 env.monitor.start('cartpole-hill/', force=True)
 policy_grad = policy_gradient()
 value_grad = value_gradient()
