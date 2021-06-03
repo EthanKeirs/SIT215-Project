@@ -1,3 +1,4 @@
+#code modified from http://kvfrans.com/simple-algoritms-for-solving-cartpole/ 
 import tensorflow as tf
 import numpy as np
 import random
