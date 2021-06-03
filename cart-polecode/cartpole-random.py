@@ -14,7 +14,7 @@ def run_episode(env, parameters):
     return totalreward
 
 def train(submit):
-    env = gym.make('CartPole-v0')
+    env = gym.make('CartPole-v1')
     if submit:
         env.monitor.start('cartpole-experiments/', force=True)
 
