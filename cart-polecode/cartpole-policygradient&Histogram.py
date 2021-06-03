@@ -78,7 +78,7 @@ def run_episode(env, policy_grad, value_grad, sess):
         future_reward = 0
         future_transitions = len(transitions) - index
         decrease = 1
-        for index2 in xrange(future_transitions):
+        for index2 in range(future_transitions):
             future_reward += transitions[(index2) + index][2] * decrease
             decrease = decrease * 0.97
         obs_vector = np.expand_dims(obs, axis=0)
@@ -107,14 +107,14 @@ policy_grad = policy_gradient()
 value_grad = value_gradient()
 sess = tf.InteractiveSession()
 sess.run(tf.initialize_all_variables())
-for i in xrange(2000):
+for i in range(2000):
     reward = run_episode(env, policy_grad, value_grad, sess)
     if reward == 200:
         print("reward 200")
         print (i)
         break
 t = 0
-for _ in xrange(1000):
+for i in range(1000):
     reward = run_episode(env, policy_grad, value_grad, sess)
     t += reward
 print (t / 1000)
